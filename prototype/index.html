@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Selah - 聖經社群</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header" id="app-header">
+            <h1 class="logo">Selah</h1>
+            <button class="search-btn" aria-label="搜尋">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="app-main" id="app-main">
+            <!-- Tab: Feed -->
+            <section class="tab-content active" id="tab-feed">
+                <!-- Stories Row -->
+                <div class="stories-row">
+                    <div class="story-item add-story">
+                        <div class="story-avatar">
+                            <span>+</span>
+                        </div>
+                        <span class="story-name">你的靈修</span>
+                    </div>
+                    <div class="story-item has-story">
+                        <div class="story-avatar">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=pastor" alt="">
+                        </div>
+                        <span class="story-name">張牧師</span>
+                    </div>
+                    <div class="story-item has-story">
+                        <div class="story-avatar">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=amy" alt="">
+                        </div>
+                        <span class="story-name">Amy</span>
+                    </div>
+                    <div class="story-item has-story">
+                        <div class="story-avatar">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=david" alt="">
+                        </div>
+                        <span class="story-name">大衛</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-avatar">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=grace" alt="">
+                        </div>
+                        <span class="story-name">Grace</span>
+                    </div>
+                </div>
+
+                <!-- Feed Posts -->
+                <div class="feed-posts">
+                    <!-- Post 1 -->
+                    <article class="post-card">
+                        <div class="post-header">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=xiaoming" alt="" class="post-avatar">
+                            <div class="post-user-info">
+                                <span class="post-username">王小明</span>
+                                <span class="post-time">2 小時前</span>
+                            </div>
+                        </div>
+                        <div class="post-scripture" data-verse="詩篇 23:1-3">
+                            <span class="scripture-ref">📖 詩篇 23:1-3</span>
+                            <p class="scripture-text">「耶和華是我的牧者，我必不致缺乏。他使我躺臥在青草地上，領我在可安歇的水邊。」</p>
+                        </div>
+                        <div class="post-reflection">
+                            <p>今天工作壓力很大，開了三個會議都沒有結論。但讀到這段經文時，想到神是我的牧者，祂會供應我一切所需。不是靠自己的能力，而是安息在祂的帶領中。</p>
+                        </div>
+                        <div class="post-image">
+                            <div class="ai-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <p class="ai-card-verse">「耶和華是我的牧者，我必不致缺乏。」</p>
+                                <span class="ai-card-ref">— 詩篇 23:1</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn amen-btn" data-count="15">
+                                <span class="action-icon">🙏</span>
+                                <span class="action-text">阿們</span>
+                                <span class="action-count">15</span>
+                            </button>
+                            <button class="action-btn comment-btn">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count">3</span>
+                            </button>
+                            <button class="action-btn share-btn">
+                                <span class="action-icon">↗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                        <div class="post-view-scripture">
+                            <button class="view-all-btn" data-verse="詩篇 23:1-3">查看此經文的 24 個領受 →</button>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="post-card">
+                        <div class="post-header">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sister" alt="" class="post-avatar">
+                            <div class="post-user-info">
+                                <span class="post-username">陳姊妹</span>
+                                <span class="post-time">5 小時前</span>
+                            </div>
+                        </div>
+                        <div class="post-scripture" data-verse="創世記 1:3">
+                            <span class="scripture-ref">📖 創世記 1:3</span>
+                            <p class="scripture-text">「神說：『要有光』，就有了光。」</p>
+                        </div>
+                        <div class="post-reflection">
+                            <p>神的話帶著能力！祂說有，就有了。我相信神在我生命中說的話，也必定成就。最近在等待一個工作機會，雖然還沒有消息，但我相信神的時間最美好。</p>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn amen-btn" data-count="8">
+                                <span class="action-icon">🙏</span>
+                                <span class="action-text">阿們</span>
+                                <span class="action-count">8</span>
+                            </button>
+                            <button class="action-btn comment-btn">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count">1</span>
+                            </button>
+                            <button class="action-btn share-btn">
+                                <span class="action-icon">↗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                        <div class="post-view-scripture">
+                            <button class="view-all-btn" data-verse="創世記 1:3">查看此經文的 12 個領受 →</button>
+                        </div>
+                    </article>
+
+                    <!-- Post 3: 生活見證 -->
+                    <article class="post-card testimony-post">
+                        <div class="post-header">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=pastor" alt="" class="post-avatar">
+                            <div class="post-user-info">
+                                <span class="post-username">張牧師</span>
+                                <span class="post-time">昨天</span>
+                            </div>
+                        </div>
+                        <div class="post-testimony-image">
+                            <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600&h=400&fit=crop" alt="教會服事">
+                        </div>
+                        <div class="post-reflection">
+                            <p>今天主日學的孩子們第一次完整背誦主禱文！看著他們認真的小臉，感謝神讓我有機會在這裡服事。每一顆小小的心，都是神所愛的。🙏</p>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">#主日學</span>
+                            <span class="tag">#服事</span>
+                            <span class="tag">#感恩</span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn amen-btn" data-count="45">
+                                <span class="action-icon">🙏</span>
+                                <span class="action-text">阿們</span>
+                                <span class="action-count">45</span>
+                            </button>
+                            <button class="action-btn comment-btn">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count">12</span>
+                            </button>
+                            <button class="action-btn share-btn">
+                                <span class="action-icon">↗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Tab: Read -->
+            <section class="tab-content" id="tab-read">
+                <div class="read-header">
+                    <button class="back-btn">←</button>
+                    <h2>創世記 Genesis</h2>
+                    <button class="settings-btn">⚙️</button>
+                </div>
+                <div class="chapter-nav">
+                    <span class="chapter-title">第 1 章</span>
+                </div>
+                <div class="scripture-content" id="scripture-content">
+                    <p class="verse" data-verse="1"><sup>1</sup> 起初，<span class="word-highlight" data-word="בְּרֵאשִׁית" data-word-id="bereshit">神</span><span class="word-highlight" data-word="בָּרָא" data-word-id="bara">創造</span>天地。</p>
+                    <p class="verse" data-verse="2"><sup>2</sup> 地是<span class="word-highlight" data-word="תֹהוּ וָבֹהוּ" data-word-id="tohu">空虛混沌</span>，淵面黑暗；神的<span class="word-highlight" data-word="רוּחַ" data-word-id="ruach">靈</span>運行在水面上。</p>
+                    <p class="verse selectable" data-verse="3"><sup>3</sup> 神說：「要有<span class="word-highlight" data-word="אוֹר" data-word-id="or">光</span>」，就有了光。</p>
+                    <p class="verse" data-verse="4"><sup>4</sup> 神看光是<span class="word-highlight" data-word="טוֹב" data-word-id="tov">好的</span>，就把光暗分開了。</p>
+                    <p class="verse" data-verse="5"><sup>5</sup> 神稱光為「晝」，稱暗為「夜」。有晚上，有早晨，這是頭一日。</p>
+                    <p class="verse" data-verse="6"><sup>6</sup> 神說：「諸水之間要有空氣，將水分為上下。」</p>
+                    <p class="verse" data-verse="7"><sup>7</sup> 神就造出空氣，將空氣以下的水、空氣以上的水分開了。事就這樣成了。</p>
+                    <p class="verse" data-verse="8"><sup>8</sup> 神稱空氣為「天」。有晚上，有早晨，是第二日。</p>
+                    
+                    <div class="verse-insights-badge" data-verse="3">
+                        📝 這段經文有 8 個領受
+                    </div>
+                </div>
+                <div class="chapter-pagination">
+                    <button class="prev-chapter" disabled>◀ 上一章</button>
+                    <div class="chapter-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next-chapter">下一章 ▶</button>
+                </div>
+            </section>
+
+            <!-- Tab: Post -->
+            <section class="tab-content" id="tab-post">
+                <div class="post-options">
+                    <h2>發布新貼文</h2>
+                    <div class="post-option-cards">
+                        <button class="post-option-card" id="btn-scripture-post">
+                            <span class="option-icon">📖</span>
+                            <span class="option-title">經文領受</span>
+                            <span class="option-desc">選取經文 + 寫下你的領受</span>
+                        </button>
+                        <button class="post-option-card" id="btn-testimony-post">
+                            <span class="option-icon">📷</span>
+                            <span class="option-title">生活見證</span>
+                            <span class="option-desc">分享你與神同行的日常</span>
+                        </button>
+                        <button class="post-option-card" id="btn-song-post">
+                            <span class="option-icon">🎵</span>
+                            <span class="option-title">詩歌分享</span>
+                            <span class="option-desc">分享感動你的詩歌</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab: Notifications -->
+            <section class="tab-content" id="tab-notifications">
+                <h2 class="section-title">通知</h2>
+                <div class="notifications-list">
+                    <div class="notification-group">
+                        <h3 class="notification-date">今天</h3>
+                        <div class="notification-item unread">
+                            <span class="notif-icon">🙏</span>
+                            <div class="notif-content">
+                                <p><strong>王小明</strong> 對你的領受說「阿們」</p>
+                                <span class="notif-preview">詩篇 23:1「耶和華是我的...</span>
+                                <span class="notif-time">2 分鐘前</span>
+                            </div>
+                        </div>
+                        <div class="notification-item unread">
+                            <span class="notif-icon">💬</span>
+                            <div class="notif-content">
+                                <p><strong>陳姊妹</strong> 回覆了你的領受</p>
+                                <span class="notif-preview">「謝謝分享！這段經文也很...</span>
+                                <span class="notif-time">1 小時前</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <span class="notif-icon">👥</span>
+                            <div class="notif-content">
+                                <p><strong>你的小組</strong> 有 3 則新領受</p>
+                                <span class="notif-time">3 小時前</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification-group">
+                        <h3 class="notification-date">昨天</h3>
+                        <div class="notification-item">
+                            <span class="notif-icon">📖</span>
+                            <div class="notif-content">
+                                <p>你追蹤的 <strong>張牧師</strong> 發布了新領受</p>
+                                <span class="notif-preview">羅馬書 8:28「萬事互相效力...</span>
+                                <span class="notif-time">昨天</span>
+                            </div>
+                        </div>
+                        <div class="notification-item highlight">
+                            <span class="notif-icon">🔥</span>
+                            <div class="notif-content">
+                                <p>你已連續讀經 <strong>7 天</strong>！繼續加油！</p>
+                                <span class="notif-time">昨天</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab: Profile -->
+            <section class="tab-content" id="tab-profile">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=joshua" alt="">
+                    </div>
+                    <h2 class="profile-name">約書亞</h2>
+                    <span class="profile-handle">@joshua_chen</span>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">🔥</span>
+                        <span class="stat-value">23</span>
+                        <span class="stat-label">連續讀經</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📝</span>
+                        <span class="stat-value">47</span>
+                        <span class="stat-label">領受總數</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">156</span>
+                        <span class="stat-label">追蹤者</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">89</span>
+                        <span class="stat-label">追蹤中</span>
+                    </div>
+                </div>
+                <div class="profile-tabs">
+                    <button class="profile-tab active">📝 領受</button>
+                    <button class="profile-tab">📷 見證</button>
+                    <button class="profile-tab">🔖 收藏</button>
+                </div>
+                <div class="profile-posts">
+                    <div class="profile-post-item">
+                        <span class="post-ref">📖 詩篇 23:1</span>
+                        <p>今天工作壓力很大...</p>
+                        <span class="post-date">昨天</span>
+                    </div>
+                    <div class="profile-post-item">
+                        <span class="post-ref">📖 創世記 1:3</span>
+                        <p>神的話帶著能力...</p>
+                        <span class="post-date">前天</span>
+                    </div>
+                    <div class="profile-post-item">
+                        <span class="post-ref">📖 腓立比書 4:13</span>
+                        <p>我靠著那加給我力量的...</p>
+                        <span class="post-date">3 天前</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item" data-tab="read">
+                <span class="nav-icon">📖</span>
+                <span class="nav-label">讀經</span>
+            </button>
+            <button class="nav-item active" data-tab="feed">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">首頁</span>
+            </button>
+            <button class="nav-item" data-tab="post">
+                <span class="nav-icon nav-icon-plus">➕</span>
+                <span class="nav-label">發布</span>
+            </button>
+            <button class="nav-item" data-tab="notifications">
+                <span class="nav-icon">🔔</span>
+                <span class="nav-label">通知</span>
+                <span class="nav-badge">2</span>
+            </button>
+            <button class="nav-item" data-tab="profile">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label">我的</span>
+            </button>
+        </nav>
+
+        <!-- Modal: Write Reflection -->
+        <div class="modal" id="modal-reflection">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="modal-close">✕</button>
+                    <h3>寫下領受</h3>
+                    <button class="modal-submit" id="btn-publish">發布</button>
+                </div>
+                <div class="modal-body">
+                    <div class="selected-scripture">
+                        <span class="scripture-ref">📖 創世記 1:3</span>
+                        <p class="scripture-text">「神說：『要有光』，就有了光。」</p>
+                    </div>
+                    <textarea class="reflection-input" placeholder="在這段經文中，我領受到..."></textarea>
+                    <div class="modal-options">
+                        <button class="option-btn" id="btn-generate-card">
+                            <span>🎨</span> 生成圖卡
+                        </button>
+                        <button class="option-btn">
+                            <span>📷</span> 附加照片
+                        </button>
+                    </div>
+                    <div class="share-options">
+                        <label>分享對象：</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="share" checked> 公開</label>
+                            <label><input type="radio" name="share"> 僅追蹤者</label>
+                            <label><input type="radio" name="share"> 我的小組</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: AI Card Selection -->
+        <div class="modal" id="modal-ai-cards">
+            <div class="modal-content modal-cards">
+                <div class="modal-header">
+                    <button class="modal-close">←</button>
+                    <h3>選擇圖卡風格</h3>
+                    <button class="modal-submit">使用</button>
+                </div>
+                <div class="modal-body">
+                    <p class="generating-text" id="generating-text">正在根據您的領受生成圖卡...</p>
+                    <div class="ai-cards-grid" id="ai-cards-grid" style="display: none;">
+                        <div class="ai-card-option selected" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <p class="card-verse">「要有光」</p>
+                            <span class="card-ref">— 創世記 1:3</span>
+                            <span class="card-style">紫色漸層</span>
+                        </div>
+                        <div class="ai-card-option" style="background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);">
+                            <p class="card-verse">「要有光」</p>
+                            <span class="card-ref">— 創世記 1:3</span>
+                            <span class="card-style">日出暖色</span>
+                        </div>
+                        <div class="ai-card-option" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff;">
+                            <p class="card-verse">「要有光」</p>
+                            <span class="card-ref">— 創世記 1:3</span>
+                            <span class="card-style">星空夜色</span>
+                        </div>
+                        <div class="ai-card-option" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <p class="card-verse">「要有光」</p>
+                            <span class="card-ref">— 創世記 1:3</span>
+                            <span class="card-style">清新水彩</span>
+                        </div>
+                        <div class="ai-card-option" style="background: #fff; border: 2px solid #333;">
+                            <p class="card-verse" style="color: #333;">「要有光」</p>
+                            <span class="card-ref" style="color: #666;">— 創世記 1:3</span>
+                            <span class="card-style">極簡黑白</span>
+                        </div>
+                        <div class="ai-card-option" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                            <p class="card-verse">「要有光」</p>
+                            <span class="card-ref">— 創世記 1:3</span>
+                            <span class="card-style">生命綠意</span>
+                        </div>
+                    </div>
+                    <button class="regenerate-btn" id="regenerate-btn" style="display: none;">
+                        🔄 重新生成
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Verse Reflections -->
+        <div class="modal" id="modal-verse-reflections">
+            <div class="modal-content modal-full">
+                <div class="modal-header">
+                    <button class="modal-close">←</button>
+                    <h3>詩篇 23:1-3 的領受</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="verse-display">
+                        <p>「耶和華是我的牧者，我必不致缺乏。他使我躺臥在青草地上，領我在可安歇的水邊。」</p>
+                    </div>
+                    <div class="reflections-count">32 位弟兄姊妹的領受</div>
+                    <div class="reflections-list">
+                        <div class="reflection-item">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=pastor" alt="" class="reflection-avatar">
+                            <div class="reflection-content">
+                                <div class="reflection-header">
+                                    <span class="reflection-user">張牧師</span>
+                                    <span class="reflection-time">昨天</span>
+                                </div>
+                                <p>「牧者」在原文是「餵養者」，神不只帶領我們，更親自餵養我們的靈命。當我們感到枯乾時，祂會帶我們到青草地和可安歇的水邊...</p>
+                                <div class="reflection-stats">
+                                    <span>🙏 45</span>
+                                    <span>💬 12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reflection-item">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=amy" alt="" class="reflection-avatar">
+                            <div class="reflection-content">
+                                <div class="reflection-header">
+                                    <span class="reflection-user">Amy</span>
+                                    <span class="reflection-time">3 天前</span>
+                                </div>
+                                <p>我剛信主三個月，這段經文讓我感受到神的愛。以前總覺得要靠自己努力，現在知道有一位牧者在照顧我...</p>
+                                <div class="reflection-stats">
+                                    <span>🙏 23</span>
+                                    <span>💬 5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reflection-item">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=david" alt="" class="reflection-avatar">
+                            <div class="reflection-content">
+                                <div class="reflection-header">
+                                    <span class="reflection-user">大衛</span>
+                                    <span class="reflection-time">上週</span>
+                                </div>
+                                <p>「我必不致缺乏」— 這不是說我們會有很多，而是說我們需要的，神都會供應。這對我是很大的提醒...</p>
+                                <div class="reflection-stats">
+                                    <span>🙏 18</span>
+                                    <span>💬 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Selection Popup -->
+        <div class="selection-popup" id="selection-popup">
+            <button class="popup-btn" id="btn-write-reflection">📝 寫領受</button>
+            <button class="popup-btn">📋 複製</button>
+            <button class="popup-btn">🔖 收藏</button>
+        </div>
+
+        <!-- Modal: Word Study (原文解析) -->
+        <div class="modal" id="modal-word-study">
+            <div class="modal-content modal-word">
+                <div class="modal-header">
+                    <button class="modal-close">✕</button>
+                    <h3>原文解析</h3>
+                    <button class="modal-share-btn">↗</button>
+                </div>
+                <div class="modal-body" id="word-study-content">
+                    <!-- Content will be dynamically inserted -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast -->
+        <div class="toast" id="toast">
+            <span class="toast-icon">✓</span>
+            <span class="toast-message">發布成功！</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
