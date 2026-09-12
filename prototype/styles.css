@@ -32,6 +32,11 @@ img[src*="dicebear"] {
     --success: #4CAF50;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+    
+    /* Emil Kowalski recommended easings */
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 body {
@@ -329,11 +334,15 @@ body {
     cursor: pointer;
     font-size: 14px;
     color: var(--text-secondary);
-    transition: all 0.2s;
+    transition: background-color 150ms var(--ease-out), color 150ms var(--ease-out);
 }
 
 .action-btn:hover {
     background: var(--bg);
+}
+
+.action-btn:active {
+    transform: scale(0.97);
 }
 
 .action-btn.active {
@@ -418,12 +427,14 @@ body {
     margin-bottom: 16px;
     padding: 8px 12px;
     border-radius: 8px;
-    transition: background 0.2s;
+    transition: background-color 150ms var(--ease-out);
     cursor: pointer;
 }
 
-.verse:hover {
-    background: rgba(93, 78, 140, 0.05);
+@media (hover: hover) and (pointer: fine) {
+    .verse:hover {
+        background: rgba(93, 78, 140, 0.05);
+    }
 }
 
 .verse.selected {
@@ -526,13 +537,19 @@ body {
     border: 2px solid var(--border);
     border-radius: 16px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: transform 200ms var(--ease-out), border-color 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
 }
 
-.post-option-card:hover {
-    border-color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+@media (hover: hover) and (pointer: fine) {
+    .post-option-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
+}
+
+.post-option-card:active {
+    transform: scale(0.98);
 }
 
 .option-icon {
@@ -704,7 +721,7 @@ body {
     color: var(--text-secondary);
     cursor: pointer;
     border-bottom: 2px solid transparent;
-    transition: all 0.2s;
+    transition: color 150ms var(--ease-out), border-color 150ms var(--ease-out);
 }
 
 .profile-tab.active {
@@ -768,7 +785,11 @@ body {
     cursor: pointer;
     color: var(--text-light);
     position: relative;
-    transition: color 0.2s;
+    transition: color 150ms var(--ease-out);
+}
+
+.nav-item:active {
+    transform: scale(0.95);
 }
 
 .nav-item.active {
@@ -826,7 +847,7 @@ body {
     max-height: 90vh;
     border-radius: 24px 24px 0 0;
     overflow: hidden;
-    animation: slideUp 0.3s ease;
+    animation: slideUp 300ms var(--ease-drawer) forwards;
 }
 
 .modal-content.modal-full {
@@ -841,9 +862,11 @@ body {
 @keyframes slideUp {
     from {
         transform: translateY(100%);
+        opacity: 0.8;
     }
     to {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -933,12 +956,18 @@ body {
     border-radius: 12px;
     font-size: 14px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: border-color 150ms var(--ease-out), background-color 150ms var(--ease-out);
 }
 
-.option-btn:hover {
-    border-color: var(--primary);
-    background: rgba(93, 78, 140, 0.05);
+@media (hover: hover) and (pointer: fine) {
+    .option-btn:hover {
+        border-color: var(--primary);
+        background: rgba(93, 78, 140, 0.05);
+    }
+}
+
+.option-btn:active {
+    transform: scale(0.98);
 }
 
 .share-options {
@@ -988,13 +1017,13 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: transform 150ms var(--ease-out), outline 150ms var(--ease-out);
     position: relative;
     color: #fff;
 }
 
-.ai-card-option:hover {
-    transform: scale(1.02);
+.ai-card-option:active {
+    transform: scale(0.97);
 }
 
 .ai-card-option.selected {
@@ -1154,7 +1183,7 @@ body {
     position: fixed;
     bottom: 90px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(20px) scale(0.95);
     background: var(--text);
     color: #fff;
     padding: 14px 24px;
@@ -1165,13 +1194,14 @@ body {
     font-size: 14px;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s;
+    transition: transform 250ms var(--ease-out), opacity 250ms var(--ease-out), visibility 250ms;
     z-index: 300;
 }
 
 .toast.active {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(0) scale(1);
 }
 
 .toast-icon {
@@ -1199,12 +1229,14 @@ body {
     cursor: pointer;
     padding: 0 2px;
     border-radius: 2px;
-    transition: all 0.2s;
+    transition: background-color 150ms var(--ease-out);
     position: relative;
 }
 
-.word-highlight:hover {
-    background: rgba(93, 78, 140, 0.2);
+@media (hover: hover) and (pointer: fine) {
+    .word-highlight:hover {
+        background: rgba(93, 78, 140, 0.2);
+    }
 }
 
 .word-highlight::after {
@@ -1214,11 +1246,13 @@ body {
     top: -8px;
     right: -8px;
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: opacity 150ms var(--ease-out);
 }
 
-.word-highlight:hover::after {
-    opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+    .word-highlight:hover::after {
+        opacity: 1;
+    }
 }
 
 /* ===== Word Study Modal ===== */
@@ -1395,15 +1429,21 @@ body {
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: background-color 150ms var(--ease-out), color 150ms var(--ease-out), border-color 150ms var(--ease-out);
     background: var(--primary);
     color: #fff;
     border: 2px solid var(--primary);
 }
 
-.follow-btn:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
+.follow-btn:active {
+    transform: scale(0.97);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .follow-btn:hover {
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+    }
 }
 
 .follow-btn.following {
@@ -1412,8 +1452,10 @@ body {
     border: 2px solid var(--primary);
 }
 
-.follow-btn.following:hover {
-    background: rgba(93, 78, 140, 0.1);
+@media (hover: hover) and (pointer: fine) {
+    .follow-btn.following:hover {
+        background: rgba(93, 78, 140, 0.1);
+    }
 }
 
 /* ===== Comments Section ===== */
@@ -1660,11 +1702,17 @@ body {
     margin-bottom: 12px;
     box-shadow: var(--shadow);
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 150ms var(--ease-out);
 }
 
-.group-card:hover {
-    transform: translateX(4px);
+@media (hover: hover) and (pointer: fine) {
+    .group-card:hover {
+        transform: translateX(4px);
+    }
+}
+
+.group-card:active {
+    transform: scale(0.98);
 }
 
 .group-card.active-group {
@@ -1731,12 +1779,18 @@ body {
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: background-color 150ms var(--ease-out), color 150ms var(--ease-out);
 }
 
-.join-group-btn:hover {
-    background: var(--primary);
-    color: #fff;
+@media (hover: hover) and (pointer: fine) {
+    .join-group-btn:hover {
+        background: var(--primary);
+        color: #fff;
+    }
+}
+
+.join-group-btn:active {
+    transform: scale(0.97);
 }
 
 /* ===== Group Reading Plan ===== */
@@ -1826,11 +1880,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 150ms var(--ease-out), box-shadow 150ms var(--ease-out);
     z-index: 50;
 }
 
-.fab-post:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 16px rgba(93, 78, 140, 0.5);
+@media (hover: hover) and (pointer: fine) {
+    .fab-post:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(93, 78, 140, 0.5);
+    }
+}
+
+.fab-post:active {
+    transform: scale(0.95);
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .modal-content {
+        animation: none;
+    }
+    
+    .toast.active {
+        transform: translateX(-50%);
+    }
 }
